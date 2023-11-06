@@ -24,7 +24,7 @@ func main() {
 	router.HandleFunc("/play", handlers.Play)
 	router.HandleFunc("/about", handlers.About)
 
-	port := ":8082"
+	port := "0.0.0.0"
 	log.Printf("servidor escuchando en http://localhost%s\n", port)
 	log.Fatal(http.ListenAndServe(port, router))
 
